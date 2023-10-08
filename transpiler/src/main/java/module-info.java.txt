@@ -1,0 +1,22 @@
+/**
+ * This would be the module-info.java file if jsweet-transpiler was modularized.
+ *
+ * There currently are two obstacles:
+ * 1. A test expects classes in the default package, which is not allowed in a modularized environment.
+ * 2. Eclipse fails to launch tests due to a stack overflow error ...
+ */
+module org.jsweet.transpiler {
+  requires standalone.jdk.compiler;
+  requires com.kohlschutter.jdk.standaloneutil;
+  requires org.apache.commons.lang3;
+  requires org.apache.commons.text;
+  requires log4j;
+  requires typescript.java.core;
+  requires org.apache.commons.io;
+  requires jsap;
+  requires jdk.unsupported;
+  requires com.google.debugging.sourcemap;
+  requires java.desktop; // for unit testing only
+  
+  opens org.jsweet.transpiler.candy to com.google.gson;
+}
