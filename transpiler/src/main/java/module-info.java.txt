@@ -16,7 +16,6 @@ module org.jsweet.transpiler {
   requires jsap;
   requires jdk.unsupported;
   requires com.google.debugging.sourcemap;
-  requires java.desktop; // for unit testing only
   
   opens org.jsweet.transpiler.candy to com.google.gson;
 }
