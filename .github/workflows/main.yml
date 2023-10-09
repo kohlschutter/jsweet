@@ -21,6 +21,7 @@ jobs:
       run: |
         export JSWEET_VERBOSE=false
         mvn clean install -Puse-snapshots
+        #
         #cd transpiler
         #mvn clean install
         #cd ..
