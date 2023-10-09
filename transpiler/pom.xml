@@ -207,6 +207,36 @@
                 </plugins>
             </build>
         </profile>
+        <profile>
+            <id>use-snapshots</id>
+            <activation>
+                <property>
+                    <name>use-snapshots</name>
+                </property>
+            </activation>
+            <repositories>
+                <repository>
+                    <id>snapshots-repo</id>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>apache.snapshots</id>
+                    <url>https://repository.apache.org/snapshots/</url>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>sonatype.snapshots</id>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
     </profiles>
 	
 	<dependencies>
@@ -283,7 +313,7 @@
 			<scope>compile</scope>
 		</dependency>
 
-		<!-- Test-only dependencies for testing candies -->
+        <!-- Test-only dependencies for testing candies -->
 		<dependency>
 			<groupId>org.jsweet</groupId>
 			<artifactId>jsweet-core</artifactId>
