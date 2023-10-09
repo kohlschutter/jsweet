@@ -20,7 +20,7 @@ jobs:
     - name: runs exhaustive tests
       run: |
         export JSWEET_VERBOSE=false
-        mvn clean install
+        mvn clean install -Puse-snapshots
         #cd transpiler
         #mvn clean install
         #cd ..
