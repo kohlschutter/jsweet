@@ -1,7 +1,7 @@
 name: Continuous integration build
 on:
   push:
-  pull_request:
+    branches: [ "main", "develop", "wip" ]
 
 jobs:
   build:
