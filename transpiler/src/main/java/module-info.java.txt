@@ -4,6 +4,7 @@
  * There currently are two obstacles:
  * 1. A test expects classes in the default package, which is not allowed in a modularized environment.
  * 2. Eclipse fails to launch tests due to a stack overflow error ...
+ *    https://github.com/eclipse-jdt/eclipse.jdt.core/issues/1490
  */
 module org.jsweet.transpiler {
   requires standalone.jdk.compiler;
